@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import "./purchaseSummary.css";
 import Details from "../../Components/Details/details";
+import Discount from "../../Components/Discount/discount";
 class PurchaseSummary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      price_reduction: 0
+    };
+  }
+
   render() {
     let total = 102.96;
     let pickUp = -3.85;
@@ -23,6 +31,7 @@ class PurchaseSummary extends Component {
           </div>
         </div>
         <Details />
+        <Discount />
       </>
     );
   }
