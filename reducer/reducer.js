@@ -10,6 +10,10 @@ const Reducer = (state = initialState, action) => {
       ...state,
       discount: action.payload
     };
+  } else {
+    return {
+      state
+    };
   }
 };
 
