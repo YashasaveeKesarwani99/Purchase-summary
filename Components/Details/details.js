@@ -8,12 +8,21 @@ class Details extends Component {
     };
   }
 
+  detailHandler = () => {
+    const d = !this.state.detail;
+    this.setState({ detail: d });
+  };
+
   render() {
     if (this.state.detail === false) {
-      return <div className="parent_details">See Item Details +</div>;
+      return (
+        <div className="parent_details" onClick={this.detailHandler}>
+          See Item Details +
+        </div>
+      );
     } else if (this.state.detail === true) {
       return (
-        <div>
+        <div onClick={this.detailHandler}>
           <h3> Office Chair </h3>
           <div className="container">
             <div className="body">

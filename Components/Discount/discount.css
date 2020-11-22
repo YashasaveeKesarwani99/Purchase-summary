@@ -1,0 +1,10 @@
+.input {
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+.input2 {
+  display: block;
+  margin: 5px auto;
+  padding: 5px;
+}
